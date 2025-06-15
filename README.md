@@ -8,6 +8,7 @@ Uruchomiony zostaje kontener zawierający aplikację oraz bazę danych w postgre
   `login: admin, hasło: admin, nazwa bazy danych: postgres` - dane dostępu do bazy
 
 Przy pierwszym uruchomieniu aplikacji zostaną utworzone 2 konta:
+
   `login: admin, hasło: admin - konto admina`
   
   `login: user, hasło: user - konto użytkownika`
