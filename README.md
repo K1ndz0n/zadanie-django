@@ -1,7 +1,9 @@
 Aplikacja działa w środowisku docker, w celu zbudowania oraz uruchomienia aplikacji należy w terminalu w głównym folderze projektu wpisać:
-  `docker compose build`
-  
-  `docker compose up`
+
+```bash
+docker compose build
+docker compose up
+```
 
 Aplikacja działa na 127.0.0.1:8000
 Uruchomiony zostaje kontener zawierający aplikację oraz bazę danych w postgresie
