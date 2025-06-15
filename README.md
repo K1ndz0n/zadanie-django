@@ -118,7 +118,7 @@ Wymaga autoryzacji
 curl -X PATCH http://localhost:8000/api/task/edit/10/ \
      -H "Content-Type: application/json" \
      -H "Authorization: Token <twoj_token>" \
-     -d '{"name": "Zaktualizowane zadanie", "description": "Nowy opis", "status": "in_progress", "user_id": 1}'
+     -d '{"name": "Zaktualizowane zadanie", "status": "in_progress"}'
 ```
 Odpowiedź:
 ```json
