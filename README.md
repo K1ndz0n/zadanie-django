@@ -26,6 +26,11 @@ Wysyłamy JSON z danymi:
 curl -X POST http://localhost:8000/api/login/ \
      -H "Content-Type: application/json" \
      -d '{"username": "admin1", "password": "adminpassword"}'
+```
+Przykładowa odpowiedź:
+```json
+{"token":"ea90d0e7ca358c9681aeabd181d22e9cbe7b2f16"}
+```
 
     
 
