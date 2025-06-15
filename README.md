@@ -16,7 +16,7 @@ Przy pierwszym uruchomieniu aplikacji zostaną utworzone 2 konta:
   
   `login: user, hasło: user - konto użytkownika`
 
-# Dokumentacja API - Zarządzanie zadaniami
+# Dokumentacja API
 
 ## Logowanie
 
