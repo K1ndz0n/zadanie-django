@@ -5,6 +5,7 @@ Aplikacja działa w środowisku docker, w celu zbudowania oraz uruchomienia apli
 
 Aplikacja działa na 127.0.0.1:8000
 Uruchomiony zostaje kontener zawierający aplikację oraz bazę danych w postgresie
+
   `login: admin, hasło: admin, nazwa bazy danych: postgres` - dane dostępu do bazy
 
 Przy pierwszym uruchomieniu aplikacji zostaną utworzone 2 konta:
