@@ -93,7 +93,7 @@ Endpoint: `PUT /api/task/edit/<task_id>/`
 Wymaga autoryzacji
 
 ```bash
-curl -X PUT http://localhost:8000/api/task/edit/10/ \
+curl -X PUT http://localhost:8000/api/task/edit/1/ \
      -H "Content-Type: application/json" \
      -H "Authorization: Token <twoj_token>" \
      -d '{"name": "Zaktualizowane zadanie", "description": "Nowy opis", "status": "in_progress", "user_id": 1}'
@@ -101,7 +101,7 @@ curl -X PUT http://localhost:8000/api/task/edit/10/ \
 Odpowiedź:
 ```json
 {
-  "task_id": 10,
+  "task_id": 1,
   "name": "Zaktualizowane zadanie",
   "description": "Nowy opis",
   "status": "in_progress",
@@ -115,7 +115,7 @@ Endpoint: `PATCH /api/task/edit/<task_id>/`
 Wymaga autoryzacji
 
 ```bash
-curl -X PATCH http://localhost:8000/api/task/edit/10/ \
+curl -X PATCH http://localhost:8000/api/task/edit/1/ \
      -H "Content-Type: application/json" \
      -H "Authorization: Token <twoj_token>" \
      -d '{"name": "Zaktualizowane zadanie", "status": "in_progress"}'
@@ -123,7 +123,7 @@ curl -X PATCH http://localhost:8000/api/task/edit/10/ \
 Odpowiedź:
 ```json
 {
-  "task_id": 10,
+  "task_id": 1,
   "name": "Zaktualizowane zadanie",
   "description": "Nowy opis",
   "status": "in_progress",
