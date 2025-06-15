@@ -21,7 +21,6 @@ Przy pierwszym uruchomieniu aplikacji zostaną utworzone 2 konta:
 ## Logowanie
 
 Endpoint: `POST /api/login/`
-Wysyłamy JSON z danymi:
 
 ```bash
 curl -X POST http://localhost:8000/api/login/ \
@@ -38,7 +37,6 @@ Odpowiedź (token):
 ## Rejestracja
 
 Endpoint:  `POST /api/register/`
-Wysyłamy JSON z danymi:
 
 ```bash
 curl -X POST http://localhost:8000/api/register/ \
@@ -71,7 +69,6 @@ Odpowiedź:
 
 Endpoint: `POST /api/task/create/`
 Wymaga autoryzacji (token lub login + hasło)
-Wysyłamy JSON z danymi:
 
 ```bash
 curl -X POST http://localhost:8000/api/task/create/ \
@@ -89,5 +86,32 @@ Odpowiedź:
   "user_id": 1
 }
 ```
+
+## Edycja zadania - cały rekord
+
+Endpoint: `PUT /api/task/edit/<task_id>/`
+Wymaga autoryzacji
+
+```bash
+curl -X PUT http://localhost:8000/api/task/edit/10/ \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Token 999cad5c35c88f63594536249b6cf57b07cd7716" \
+     -d '{"name": "Zaktualizowane zadanie", "description": "Nowy opis", "status": "in_progress", "user_id": 1}'
+```
+Odpowiedź:
+```json
+{
+  "task_id": 10,
+  "name": "Zaktualizowane zadanie",
+  "description": "Nowy opis",
+  "status": "in_progress",
+  "user_id": 1
+}
+```
+
+## Edycja zadania - wybrane dane
+
+Endpoint: `PATCH /api/task/edit/<task_id>/`
+
 
 
