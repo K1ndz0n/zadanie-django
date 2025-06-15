@@ -18,10 +18,9 @@ Przy pierwszym uruchomieniu aplikacji zostaną utworzone 2 konta:
 
 # Dokumentacja API - Zarządzanie zadaniami
 
-## Logowanie (pobranie tokena)
+## Logowanie
 
 Endpoint: `POST /api/login/`
-
 Wysyłamy JSON z danymi:
 
 ```bash
@@ -29,10 +28,13 @@ curl -X POST http://localhost:8000/api/login/ \
      -H "Content-Type: application/json" \
      -d '{"username": "admin1", "password": "adminpassword"}'
 ```
-Przykładowa odpowiedź:
+Przykładowa odpowiedź (token):
 ```json
 {"token":"ea90d0e7ca358c9681aeabd181d22e9cbe7b2f16"}
 ```
+
+## Rejestracja
+
 
     
 
