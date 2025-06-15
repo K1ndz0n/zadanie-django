@@ -9,7 +9,7 @@ class Task(models.Model):
         ("finished", "Rozwiązany")
     ]
 
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
     status = models.CharField(max_length=20, choices=STATES, default="new")
     user = models.ForeignKey(User, on_delete=models.CASCADE,
