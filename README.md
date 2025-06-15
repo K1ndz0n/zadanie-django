@@ -25,7 +25,7 @@ Endpoint: `POST /api/login/`
 ```bash
 curl -X POST http://localhost:8000/api/login/ \
      -H "Content-Type: application/json" \
-     -d '{"username": "admin1", "password": "adminpassword"}'
+     -d '{"username": "admin", "password": "admin"}'
 ```
 Odpowiedź (token):
 ```json
