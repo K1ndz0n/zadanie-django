@@ -47,7 +47,7 @@ Odpowiedź:
 ```json
 {
   "id": 5,
-  "username": "nowyuser"
+  "username": "testuser"
 }
 ```
 
