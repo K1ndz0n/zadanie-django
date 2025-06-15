@@ -13,7 +13,7 @@ Uruchomiony zostaje kontener zawierający aplikację oraz bazę danych w postgre
 
 Przy pierwszym uruchomieniu aplikacji zostaną utworzone 2 konta:
 
-  `login: admin, hasło: admin - konto admina`
+  `login: admin, hasło: admin - konto admina` - tylko admin może usuwać zadania
   
   `login: user, hasło: user - konto użytkownika`
 
