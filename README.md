@@ -28,14 +28,66 @@ curl -X POST http://localhost:8000/api/login/ \
      -H "Content-Type: application/json" \
      -d '{"username": "admin1", "password": "adminpassword"}'
 ```
-Przykładowa odpowiedź (token):
+Odpowiedź (token):
 ```json
-{"token":"ea90d0e7ca358c9681aeabd181d22e9cbe7b2f16"}
+{
+  "token":"ea90d0e7ca358c9681aeabd181d22e9cbe7b2f16"
+}
 ```
 
 ## Rejestracja
 
+Endpoint:  `POST /api/register/`
+Wysyłamy JSON z danymi:
 
-    
+```bash
+curl -X POST http://localhost:8000/api/register/ \
+     -H "Content-Type: application/json" \
+     -d '{"username": "testuser", "password": "haslo123"}'
+```
+Odpowiedź:
+```json
+{
+  "id": 5,
+  "username": "nowyuser"
+}
+```
+
+## Pobieranie listy użytkowników
+
+Endpoint: `GET /api/user-list/`
+```bash
+curl http://localhost:8000/api/user-list/
+```
+Odpowiedź:
+```json
+[
+  {"id": 1, "username": "admin1"},
+  {"id": 2, "username": "user"}
+]
+```
+
+## Tworzenie nowego zadania
+
+Endpoint: `POST /api/task/create/`
+Wymaga autoryzacji (token lub login + hasło)
+Wysyłamy JSON z danymi:
+
+```bash
+curl -X POST http://localhost:8000/api/task/create/ \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Token 999cad5c35c88f63594536249b6cf57b07cd7716" \
+     -d '{"name": "Nowe zadanie", "description": "Opis zadania", "status": "new", "user_id": 1}'
+```
+Odpowiedź:
+```json
+{
+  "task_id": 10,
+  "name": "Nowe zadanie",
+  "description": "Opis zadania",
+  "status": "new",
+  "user_id": 1
+}
+```
 
 
